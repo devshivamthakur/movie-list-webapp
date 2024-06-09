@@ -25,6 +25,7 @@ nav button:hover, nav button:focus {
 }
 
 
+/* Default styles for larger screens */
 .movie-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -42,6 +43,14 @@ nav button:hover, nav button:focus {
   width: 100%;
   border-radius: 5px;
 }
+
+/* Styles for mobile view */
+@media (max-width: 768px) {
+  .movie-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 
 .movie-info {
   padding: 0.5rem 0;
