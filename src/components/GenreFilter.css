@@ -1,0 +1,56 @@
+/* Container that holds the genre buttons and allows horizontal scrolling */
+.genre-filter-container {
+    display: flex;
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    overflow-y: hidden; /* Prevents vertical scrolling */
+    white-space: nowrap; /* Prevents the buttons from wrapping to a new line */
+    padding: 10px 0;
+    background-color: #333; /* Adjust as needed */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+  }
+  
+  /* Inner container to ensure the buttons are in a single row */
+  .genre-filter {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  /* Styling for individual buttons */
+  .genre-filter button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #444; /* Adjust as needed */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap; /* Prevents text wrapping inside the button */
+  }
+  
+  .genre-filter button:hover {
+    background-color: #555; /* Adjust as needed */
+  }
+  
+
+  /* Custom scrollbar styles */
+.genre-filter-container::-webkit-scrollbar {
+  height: 8px; /* Height of the horizontal scrollbar */
+}
+
+.genre-filter-container::-webkit-scrollbar-track {
+  background: #444; /* Track color */
+  border-radius: 10px;
+}
+
+.genre-filter-container::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar thumb color */
+  border-radius: 10px;
+}
+
+.genre-filter-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Scrollbar thumb hover color */
+}
